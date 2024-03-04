@@ -1,5 +1,6 @@
 package LabSession1;
 
+
 class Main{
 
     public static void main(String[] args){
@@ -19,8 +20,8 @@ class Main{
     }
 
 }
-
 class Counter extends Thread {
+
 
     Counter (String name){
 
@@ -36,7 +37,9 @@ class Counter extends Thread {
 
             try {
 
-                Thread.sleep((int)(Math.random() * 1000));
+                Thread.sleep((int)(Math.random() *
+
+                        1000));
 
             }catch (InterruptedException e)
 
