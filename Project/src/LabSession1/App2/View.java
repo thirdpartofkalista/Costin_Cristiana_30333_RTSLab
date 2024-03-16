@@ -2,33 +2,55 @@ package LabSession1.App2;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class View {
-    private JFrame frame;
-    private ArrayList<JProgressBar> progressBars;
+public class View extends JFrame implements Observer {
+
+
+    //Fir f = new Fir();
+    ArrayList<JProgressBar> bars=new ArrayList<JProgressBar>();
 
     public View(int nrThreads) {
-        frame = new JFrame("Progress Bars");
-        frame.setSize(450, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel();
-        progressBars = new ArrayList<>();
-        for (int i = 0; i < nrThreads; i++) {
-            JProgressBar progressBar = new JProgressBar();
-            progressBar.setMaximum(1000);
-            progressBar.setValue(0);
-            panel.add(progressBar);
-            progressBars.add(progressBar);
-        }
+        setLayout(null);
 
-        frame.add(panel);
-        frame.setVisible(true);
+        setSize(450,400);
+
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        init(nrThreads);
+
+        this.setVisible(true);
+
     }
 
-    public void updateProgressBars(ArrayList<Integer> progressValues) {
-        for (int i = 0; i < progressBars.size(); i++) {
-            progressBars.get(i).setValue(progressValues.get(i));
+    private void init(int n){
+
+        for(int i=0 ;i<n; i++){
+
+            JProgressBar pb=new JProgressBar();
+
+            pb.setMaximum(1000);
+
+            pb.setBounds(50,(i+1)*30,350,20);
+
+            this.add(pb);
+
+            this.bars.add(pb);
+
         }
+
+    }
+
+    public void setProgressValue(int id,int val){
+
+        bars.get(id).setValue(val);
+
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        this.setProgressValue(((Model)o).getId(), ((Model)o).getC());
     }
 }
