@@ -9,7 +9,7 @@ public class RandomNum {
         int[] numbers = new int[10];
         Random random = new Random();
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = random.nextInt(100); // Generates random numbers between 0 and 99
+            numbers[i] = random.nextInt(100);
         }
 
         System.out.println("Original array:");
