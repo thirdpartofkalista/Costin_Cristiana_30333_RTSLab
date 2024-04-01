@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae321447-a7a8-4c74-9784-a40c6464e0b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../LabSession3/Application1/ExecutionThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LabSession3/Application1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LabSession3/Application2/ExecutionThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LabSession3/Application2/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2eUh8c7Ep9l4JmRWq2XJEdSNTeq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/40732/OneDrive/Desktop/III/RTS/Costin_Cristiana_30333_RTSLab/Project/src/LabSession3"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae321447-a7a8-4c74-9784-a40c6464e0b4" name="Changes" comment="" />
+      <created>1711964905518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711964905518</updated>
+    </task>
+    <servers />
+  </component>
+</project>
