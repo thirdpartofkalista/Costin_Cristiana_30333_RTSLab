@@ -1,39 +1,33 @@
 package LabSession3.Application2;
 
-public class ExecutionThread extends Thread {
+public class ExecutionThread extends Thread{
     Integer monitor;
-    Integer monitor1;
-    int sleep_time, activity_min, activity_max;
-    public ExecutionThread(Integer monitor, int sleep_time, int activity_min, int activity_max) {
+    int minActivity;
+    int maxActivity;
+    int delay;
+    public ExecutionThread(Integer monitor, int minActivity, int maxActivity, int delay) {
         this.monitor = monitor;
-        this.sleep_time = sleep_time;
-        this.activity_min = activity_min;
-        this.activity_max = activity_max;
+        this.delay = delay;
+        this.minActivity = minActivity;
+        this.maxActivity = maxActivity;
     }
+
     public void run() {
         System.out.println(this.getName() + " - STATE 1");
-        try {
-            Thread.sleep(Math.round(Math.random() * (sleep_time) * 500));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println(this.getName() + " - STATE 2");
-        synchronized (monitor) {
-            System.out.println(this.getName() + " - STATE 3");
-            int k = (int) Math.round(Math.random()*(activity_max
-                    - activity_min) + activity_min);
+        synchronized (this.monitor) {
+            System.out.println(this.getName() + " - STATE 2");
+            int k = (int) Math.round(Math.random() * (this.maxActivity - this.minActivity) + this.minActivity);
             for (int i = 0; i < k * 100000; i++) {
-                i++; i--;
+                i++;
+                i--;
+            }
+            try {
+                Thread.sleep(Math.round(Math.random() * this.delay * 500));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
-        synchronized (monitor1) {
-            System.out.println(this.getName() + " - STATE 3");
-            int k = (int) Math.round(Math.random()*(activity_max
-                    - activity_min) + activity_min);
-            for (int i = 0; i < k * 100000; i++) {
-                i++; i--;
-            }
-        }
-        System.out.println(this.getName() + " - STATE 4");
+
+        System.out.println(this.getName() + " - STATE 3");
     }
 }
