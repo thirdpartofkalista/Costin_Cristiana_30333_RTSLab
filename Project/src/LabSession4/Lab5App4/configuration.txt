@@ -1,0 +1,5 @@
+# Car/seconds
+NORTH=2
+SOUTH=3
+EAST=2
+WEST=3
